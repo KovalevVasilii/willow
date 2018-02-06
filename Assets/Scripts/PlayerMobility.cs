@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using CnControls;
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class PlayerMobility : MonoBehaviour
 {
-
-    public float speed = 1.5f;
-    public float acceleration = 100;
- 
-    private Vector3 direction;
+  
+    public float speed = 15f;
+    Vector3 position;
     private Rigidbody2D body;
 
     void Start()
@@ -19,36 +17,23 @@ public class PlayerMobility : MonoBehaviour
         body.gravityScale = 0;
     }
 
-    void FixedUpdate()
-    {
-        body.AddForce(direction * body.mass * speed * acceleration);
-        gameObject.tag = "Player";
-        if (Mathf.Abs(body.velocity.x) > speed)
-        {
-            body.velocity = new Vector2(Mathf.Sign(body.velocity.x) * speed, body.velocity.y);
-        }
-
-        if (Mathf.Abs(body.velocity.y) > speed)
-        {
-            body.velocity = new Vector2(body.velocity.x, Mathf.Sign(body.velocity.y) * speed);
-        }
-
-    }
-
     void LookAtCursor()
     {
-        var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        // Debug.Log(mousePosition);
-        Quaternion rot = Quaternion.LookRotation(transform.position - mousePosition, Vector3.forward);
+
+        Quaternion rot = Quaternion.LookRotation(transform.position- position, Vector3.up);
         transform.rotation = rot;
         transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
     }
 
     void Update()
     {
-        direction = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
         LookAtCursor();
     }
    
+
+    void FixedUpdate()
+    {
+        position = new Vector3(CnInputManager.GetAxis("Horizontal"), CnInputManager.GetAxis("Vertical"), 0f);
+        transform.position += position * Time.deltaTime*speed;
+    }
 }

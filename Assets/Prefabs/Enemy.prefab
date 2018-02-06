@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4819524134150596}
   - component: {fileID: 212543028384918450}
   - component: {fileID: 95624889179868686}
-  - component: {fileID: 50310376862081746}
-  - component: {fileID: 61122026881740718}
   - component: {fileID: 114948301698371850}
+  - component: {fileID: 50436578796282010}
+  - component: {fileID: 61817659371124060}
+  - component: {fileID: 61359660595789530}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -38,13 +39,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099701240655288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.93, y: 0.14, z: 0}
+  m_LocalPosition: {x: 4.4209557, y: -0.07600093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50310376862081746
+--- !u!50 &50436578796282010
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -64,7 +65,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61122026881740718
+--- !u!61 &61359660595789530
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1099701240655288}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.56, y: 1.64}
+    newSize: {x: 1.56, y: 1.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.56, y: 1.64}
+  m_EdgeRadius: 0
+--- !u!61 &61817659371124060
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -87,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.02, y: 1.27}
+  m_Size: {x: 1.97, y: 2.04}
   m_EdgeRadius: 0
 --- !u!95 &95624889179868686
 Animator:

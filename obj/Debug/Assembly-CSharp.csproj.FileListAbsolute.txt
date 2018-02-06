@@ -133,3 +133,8 @@ C:\Users\user\Documents\Top-Down Test\willow\Temp\bin\Debug\UnityEditor.iOS.Exte
 C:\Users\user\Documents\Top-Down Test\willow\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\Top-Down Test\willow\obj\Debug\Assembly-CSharp.dll
 C:\Users\user\Documents\Top-Down Test\willow\obj\Debug\Assembly-CSharp.pdb
+C:\Users\user\Documents\Top-Down Test\willow\Temp\bin\Debug\UnityEditor.Android.Extensions.dll
+C:\Users\user\Documents\Top-Down Test\willow\Temp\bin\Debug\UnityEditor.iOS.Extensions.dll
+C:\Users\user\Documents\Top-Down Test\willow\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+C:\Users\user\Documents\Top-Down Test\willow\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\user\Documents\Top-Down Test\willow\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
