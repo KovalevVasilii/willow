@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//level gen algorithm will be replaced with tunneling algorithm in the next iteration
 public class LevelGenerator : MonoBehaviour{
 	private void GenerateTunnel(int turns, int length, ref int[,] map, Vector2I start, int size = 1) {
 		int tiles = 0;
@@ -110,15 +111,5 @@ public class LevelGenerator : MonoBehaviour{
 	public int rooms_number = 2;
 	public int[,] GetMap() {
 		return GenerateLevel (x_length, y_length, tunnels_number, rooms_number);
-	}
-
-	void Start() {
-		/*int[,] map = GenerateLevel (x_length, y_length, tunnels_number, rooms_number);
-		for (int i = 0; i<map.GetLength(0); i++) {
-			string str = "";
-			for (int j = 0; j < map.GetLength (1); j++)
-				str += map [i, j] + " ";
-			Debug.Log (str);
-		}*/
 	}
 }
